@@ -1,2 +1,2 @@
-<p># Calculator (Multifunctional calculator)</p>
+<p># MultiCalculator</p>
 <p style="text-align: left;"><strong>Requirements:</strong><br />&nbsp; &nbsp; &nbsp;*Python3<br />&nbsp; &nbsp; &nbsp;*termcolor(module) ==&gt; pip install termcolor<br />&nbsp; &nbsp; &nbsp;*string (module) ==&gt; maybe integrated with python<br /><strong>To run the script:</strong><br /><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***python3 calculator.py***</em></p>
