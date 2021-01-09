@@ -1,11 +1,11 @@
-import time
 from termcolor import colored
 from normalcalculator import normalcalculator
 from BMI import bmi
 from timeconvert import timeconvert
 from tallf import tallf
 from equation import equation
-
+from unit import unit
+import math
 print(colored("""
 
  _____         _               _         _                
@@ -15,28 +15,17 @@ print(colored("""
 | \__/\| (_| || || (__ | |_| || || (_| || |_ | (_) || |   
  \____/ \__,_||_| \___| \__,_||_| \__,_| \__| \___/ |_|   
                                                 
-""", "red"))
-time.sleep(1)
-print(colored("Loading ...","blue"))
-time.sleep(1)
-print(colored("20%","blue"))
-time.sleep(1)
-print(colored("40%","blue"))
-time.sleep(1)
-print(colored("60%","blue"))
-time.sleep(1)
-print(colored("80%","blue"))
-time.sleep(2)
-print(colored("100%","blue"))
+"""+str(math.pi), "red"))
 def calculator():
     print(colored("----------------------------------------------------------------", "magenta"))
     print("""Select number form list please :""")
-    print(colored("1 ", "green"), colored(".", "red"), colored("Normal calculator", "yellow"))
+    print(colored("1 ", "green"), colored(".", "red"), colored("Normal Calculator", "yellow"))
     print(colored("2 ", "green"), colored(".", "red"), colored("BMI", "yellow"))
-    print(colored("3 ", "green"), colored(".", "red"), colored("Time calculator(converter)", "yellow"))
-    print(colored("4 ", "green"), colored(".", "red"), colored("Future height calculator", "yellow"))
+    print(colored("3 ", "green"), colored(".", "red"), colored("Time Calculator(converter)", "yellow"))
+    print(colored("4 ", "green"), colored(".", "red"), colored("Future Height Calculator", "yellow"))
     print(colored("5 ", "green"), colored(".", "red"), colored("Equation", "yellow"))
-    print(colored("99", "green"), colored(".", "red"), colored("exit", "yellow"))
+    print(colored("6 ", "green"), colored(".", "red"), colored("Unit Converter", "yellow"))
+    print(colored("99", "green"), colored(".", "red"), colored("Exit", "yellow"))
 
     try:
         a = int(input(colored("""Enter your selected number here please
@@ -69,6 +58,14 @@ def calculator():
         else:
             eq = equation()
             if eq == 1:
+                calculator()
+    elif a == 6:
+        t = unit()
+        if t == 1:
+            calculator()
+        else:
+            t = unit()
+            if t == 1:
                 calculator()
     elif a == 99:
         exit()
