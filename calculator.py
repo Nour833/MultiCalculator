@@ -5,7 +5,9 @@ from timeconvert import timeconvert
 from tallf import tallf
 from equation import equation
 from unit import unit
+from more import more
 import math
+
 print(colored("""
 
  _____         _               _         _                
@@ -15,7 +17,9 @@ print(colored("""
 | \__/\| (_| || || (__ | |_| || || (_| || |_ | (_) || |   
  \____/ \__,_||_| \___| \__,_||_| \__,_| \__| \___/ |_|   
                                                 
-"""+str(math.pi), "red"))
+""" + str(math.pi), "red"))
+
+
 def calculator():
     print(colored("----------------------------------------------------------------", "magenta"))
     print("""Select number form list please :""")
@@ -25,6 +29,7 @@ def calculator():
     print(colored("4 ", "green"), colored(".", "red"), colored("Future Height Calculator", "yellow"))
     print(colored("5 ", "green"), colored(".", "red"), colored("Equation", "yellow"))
     print(colored("6 ", "green"), colored(".", "red"), colored("Unit Converter", "yellow"))
+    print(colored("7 ", "green"), colored(".", "red"), colored("More", "yellow"))
     print(colored("99", "green"), colored(".", "red"), colored("Exit", "yellow"))
 
     try:
@@ -65,6 +70,14 @@ def calculator():
             calculator()
         else:
             t = unit()
+            if t == 1:
+                calculator()
+    if a == 7:
+        t = more()
+        if t == 1:
+            calculator()
+        else:
+            t = more()
             if t == 1:
                 calculator()
     elif a == 99:
